@@ -1,0 +1,30 @@
+{
+  "games": {
+    "-5569178077": {
+      "status": "waiting",
+      "phase": "idle",
+      "players": [
+        {
+          "id": 8163321006,
+          "name": "Pranjal"
+        }
+      ],
+      "turnIndex": 0,
+      "customTruths": [],
+      "customDares": [],
+      "currentMessageId": null,
+      "currentQuestionType": null,
+      "currentQuestionText": null,
+      "changeVotes": [],
+      "verifyVotes": []
+    }
+  },
+  "users": {
+    "8163321006": {
+      "groups": [
+        -5569178077
+      ],
+      "pendingQ": null
+    }
+  }
+}
