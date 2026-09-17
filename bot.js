@@ -1,5 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
+const express = require('express');
+const app = express();
+const PORT = 8080; // Hardcoded for Fly.io
+
 
 const TOKEN = '8236093600:AAGbegOvkaZQiqIsO8dX726-Hs0od8Ee0Z4';
 const bot = new TelegramBot(TOKEN, { polling: true });
@@ -14,6 +18,14 @@ const afkTimers = {};
 // ============================================================
 let isSaving = false;
 let pendingSave = false;
+
+app.get('/', (req, res) => {
+    res.send('Truth or Dare Bot is healthy and running!');
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Dummy health-check server running on port ${PORT}`);
+});
 
 function loadDB() {
     try {
