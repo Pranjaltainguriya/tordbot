@@ -126,13 +126,58 @@ function cleanupGameUsers(game, chatId) {
     for (const player of game.players) removeUserFromGroup(player.id, chatId);
 }
 
-const defaultTruths = [
-    'What is your biggest fear?', 'What is your most embarrassing moment?', 
-    'Who was your first crush?', 'What is one secret you have never told anyone?'
+const defaultTruths =[ // Flirty
+  "If you had to kiss someone in this GC, who would be your first choice? 👀",
+  "Who in this GC would you go on a date with?",
+  "Who in this GC do you find the most attractive?",
+  "If you had to flirt with someone here for 10 minutes, who would you pick?",
+  "Who in this GC could probably make you blush the easiest?",
+
+  // Chaotic
+  "Who in this GC would you trust least with a secret?",
+  "What's the pettiest reason you've ever disliked someone?",
+  "Have you ever intentionally ignored someone's message?",
+  "What's the most cringe phase you've ever had?",
+  "What's something you pretend to like because everyone else likes it?",
+
+  // Mixed
+  "If you could spend a whole day with one person here, who would you choose?",
+  "Who was your first impression of someone here, and has it changed?",
+  "Who in this GC would you be most nervous to meet IRL?",
+  "What's the most embarrassing username you've ever had?",
+  "If you had to swap lives with one person here, who would it be?",
+  "Who would you secretly want to receive a 'good morning' text from?",
+  "What's the weirdest thing you've ever searched online?",
+  "If you had to choose one person here as your fake partner, who would it be?",
+  "What's the most childish thing you still do?",
+  "What's a popular thing you secretly dislike?"
 ];
 const defaultDares = [
-    'Send a funny selfie to the group.', 'Do 10 push-ups.', 
-    'Sing a song for 20 seconds.', 'Change your profile picture for 10 minutes.'
+    // Flirty
+  "Pick someone in the GC and give them your best pickup line. 😏",
+  "Tag someone you'd go on a date with and give one reason why.",
+  "Flirt with the person of your choice for the next 5 messages.",
+  "Give someone in the GC a cute nickname.",
+  "Choose someone and write them a cheesy one-line confession.",
+
+  // Chaotic
+  "Send a completely serious message saying: 'I have discovered something disturbing about potatoes.' 🥔",
+  "Write a fake breaking-news headline about yourself.",
+  "Make up a ridiculous rule and convince everyone they have to follow it.",
+  "Roast yourself in exactly 3 sentences.",
+  "Start a completely fake argument with yourself and then lose the argument. 💀",
+
+  // Mixed
+  "Tag someone who could make you blush the easiest.",
+  "Write a one-star review of your own personality.",
+  "Choose someone and pretend to ask them out using only 10 words.",
+  "Invent a completely fake word and give it a serious definition.",
+  "Tag someone you'd choose as your fake boyfriend/girlfriend for a week.",
+  "Describe the person above you as if they're a legendary video-game boss.",
+  "Pick someone and describe your imaginary first date with them.",
+  "Write a ridiculous motivational quote about yourself.",
+  "Tag someone you'd secretly want to get a 'good morning ❤️' text from.",
+  "Make up a fake conspiracy theory and convince the GC it's real."
 ];
 
 for (const chatId of Object.keys(db.games)) {
